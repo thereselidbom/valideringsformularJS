@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        
+        <script src="https://kit.fontawesome.com/27106bfeb0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <title>Formulär</title>
+    </head>
+    <body>
+        <!--FORMULAR START-->
+  <div class="container">
+        <div class="header">
+            <h2>Skapa Användare</h2>
+        </div>
+        <form class="form" id="form">
+
+            <div class="form-control success">
+                <label>Namn</label>
+                <input type="text" placeholder="Förnamn" id="firstName">
+                <i class="fas fa-check-circle" id="success"></i>
+                <i class="fas fa-exclamation-circle" id="error"></i>
+                <small>Error Message</small>
+            </div>
+            
+            <div class="form-control error" >
+                <label>Efternamn</label>
+                <input type="text" placeholder="Efternamn" id="lastName">
+                <i class="fas fa-check-circle" id="success"></i>
+                <i class="fas fa-exclamation-circle" id="error"></i>
+                <small>Error Message</small>
+            </div>
+            
+            <div class="form-control">
+                <label>EmailAdress</label>
+                <input type="email" placeholder="Email" id="email">
+                <i class="fas fa-check-circle" id="success"></i>
+                <i class="fas fa-exclamation-circle" id="error"></i>
+                <small>Error Message</small>
+            </div>
+            <button id="button">Submit</button>
+        </form>
+
+            <!-- ------------------------------------ -->
+            <div class="container">
+                <div id="users" class="users">
+                </div>
+  </div>
+        <!--FORMULAR END-->
+
+
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
