@@ -1,7 +1,7 @@
 
-let users = [
+//selectors
 
-]
+let users = []
 
 const form = document.getElementById("form");
 const firstName = document.getElementById("firstName");
@@ -18,20 +18,32 @@ button.addEventListener('click', e => {
 	checkInputs();
 });
 
+
+//functions 
+
+
 function checkInputs(){
     //get value from inputs
-    var firstNameValue = firstName.value
-    var lastNameValue = lastName.value
-    var emailValue = email.value
+    const firstNameValue = firstName.value
+    const lastNameValue = lastName.value
+    const emailValue = email.value
 
     if(firstNameValue === '') {
       setErrorFor(firstName, 'firstname cannot be blank');
-    } else {
+    } 
+    else if (firstName.value.length < 2) {
+      setErrorFor(firstName, 'firstname must be at least two letters');
+    }       else {
       setSuccessFor(firstName);
     }
 
+    
+
     if(lastNameValue === '') {
       setErrorFor(lastName, 'lastname cannot be blank');
+    } 
+    else if (firstName.value.length < 2) {
+      setErrorFor(lastName, 'lastname must be at least two letters');
     } else {
       setSuccessFor(lastName);
     }
@@ -56,12 +68,11 @@ function checkInputs(){
   
 }
 
-
 function setErrorFor(input, message) {
   const formControl = input.parentElement;
   const small = formControl.querySelector('small');
 
-  //error message
+  //error error  message
   small.innerText = message;
   //classchange
   formControl.className = 'form-control error'
@@ -77,11 +88,11 @@ function isEmail(email) {
 }
 
 
-//list
+//list-functions
 function listUsers() {
   output.innerHTML = ''
   users.forEach(user => {
-    output.innerHTML += `<div class="user">
+    output.innerHTML += `<div id="user">
     <p>${user.firstName} ${user.lastName}</p>
     <p id="small">${user.email}</p>
   </div>`
@@ -92,11 +103,10 @@ function listUsers() {
 function addUser() {
   let user = {
     id: Date.now().toString(),
-    namn: firstName.value.trim(),
-    efternamn: lastName.value.trim(),
+    firstName: firstName.value.trim(),
+    lastName: lastName.value.trim(),
     email: email.value.trim()
   }
   users.push(user);
   listUsers();
 }
-
